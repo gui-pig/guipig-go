@@ -1,0 +1,30 @@
+{
+  "table": "units",
+  "columns": [
+    {
+      "name": "id",
+      "type": "integer",
+      "unique": true,
+      "nullable": false,
+      "primaryKey": true,
+      "autoIncrement": true,
+      "defaultValue": null
+    },
+    {
+      "name": "unitName",
+      "type": "varchar",
+      "length": 255,
+      "unique": true,
+      "nullable": false,
+      "primaryKey": false,
+      "defaultValue": null,
+      "relations": [{
+        "table": "units",
+        "column": "unitName",
+        "type": "one-to-many",
+        "onDelete": "cascade",
+        "onUpdate": "cascade"
+      }]
+    }
+  ]
+}
