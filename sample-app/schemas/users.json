@@ -1,0 +1,68 @@
+{
+  "table": "users",
+  "columns": [
+    {
+      "name": "id",
+      "type": "integer",
+      "unique": true,
+      "nullable": false,
+      "primaryKey": true,
+      "autoIncrement": true,
+      "defaultValue": null
+    },
+    {
+      "name": "name",
+      "type": "varchar",
+      "length": 255,
+      "unique": true,
+      "nullable": false,
+      "primaryKey": false,
+      "autoIncrement": false,
+      "defaultValue": null
+    },
+    {
+      "name": "unit_id",
+      "relations": [{
+        "table": "units",
+        "column": "unit_id"
+      }]
+    },
+    {
+      "name": "address",
+      "type": "varchar",
+      "length": 255,
+      "unique": true,
+      "nullable": true,
+      "primaryKey": false,
+      "autoIncrement": false,
+      "defaultValue": null
+    },
+    {
+      "name": "age",
+      "type": "varchar",
+      "length": 255,
+      "unique": true,
+      "nullable": false,
+      "primaryKey": false,
+      "autoIncrement": false,
+      "defaultValue": 0
+    }
+  ],
+  "seeds": [
+    {
+      "name": "Vergie",
+      "address": "buring",
+      "age": "19"
+    },
+    {
+      "name": "Ericson",
+      "address": "perum korpri",
+      "age": "23"
+    },
+    {
+      "name": "Dika",
+      "address": "jl mayjen sungkono",
+      "age": "16"
+    }
+  ]
+}
